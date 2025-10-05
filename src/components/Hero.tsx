@@ -5,17 +5,6 @@ import profileImage from "@/assets/profile.jpg";
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
-      {/* Availability Badge */}
-      <div className="absolute top-8 right-8 z-20 blur-fade-in">
-        <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-primary/30">
-          <span className="relative flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-          </span>
-          <span className="text-sm font-medium text-foreground/90">Available for freelance work</span>
-        </div>
-      </div>
-
       {/* Animated Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
@@ -47,6 +36,16 @@ const Hero = () => {
               organizations. I'm a tech enthusiast who loves turning complex
               problems into elegant, scalable solutions.
             </p>
+
+            <div className="blur-fade-in-delay-3">
+              <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-primary/30">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span className="text-sm font-medium text-foreground/90">Available for freelance work</span>
+              </div>
+            </div>
 
             <div className="flex flex-wrap gap-4 blur-fade-in-delay-3">
               <Button

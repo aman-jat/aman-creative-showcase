@@ -45,7 +45,7 @@ const About = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="glass rounded-2xl p-6 text-center hover:shadow-glow-primary transition-smooth group"
+              className="glass rounded-2xl p-6 text-center hover:border-primary/40 hover:scale-105 transition-smooth group"
             >
               <div className="flex justify-center mb-4">
                 <div

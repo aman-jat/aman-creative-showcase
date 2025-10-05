@@ -49,7 +49,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="glass rounded-2xl p-8 hover:shadow-glow-primary transition-smooth group"
+              className="glass rounded-2xl p-8 hover:border-primary/40 hover:-translate-y-1 transition-smooth group"
             >
               <div
                 className={`w-full h-48 mb-6 rounded-xl bg-gradient-to-br ${project.gradient} opacity-20 group-hover:opacity-30 transition-smooth`}

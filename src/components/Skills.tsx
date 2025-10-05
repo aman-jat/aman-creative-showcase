@@ -94,7 +94,7 @@ const Skills = () => {
 
                     <div className="relative h-3 bg-muted rounded-full overflow-hidden">
                       <div
-                        className={`absolute inset-y-0 left-0 bg-gradient-to-r ${category.gradient} rounded-full transition-all duration-1000 ease-out group-hover:shadow-glow-primary`}
+                        className={`absolute inset-y-0 left-0 bg-gradient-to-r ${category.gradient} rounded-full transition-all duration-1000 ease-out`}
                         style={{ width: `${skill.level}%` }}
                       />
                     </div>

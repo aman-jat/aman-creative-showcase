@@ -15,7 +15,7 @@ const Contact = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <div className="glass rounded-2xl p-6 text-center hover:shadow-glow-primary transition-smooth group">
+          <div className="glass rounded-2xl p-6 text-center hover:border-primary/40 hover:scale-105 transition-smooth group">
             <div className="flex justify-center mb-4">
               <div className="p-4 rounded-xl bg-gradient-to-br from-primary to-accent group-hover:scale-110 transition-spring">
                 <Mail className="h-6 w-6 text-white" />
@@ -25,7 +25,7 @@ const Contact = () => {
             <p className="text-muted-foreground text-sm">aman.jat@example.com</p>
           </div>
 
-          <div className="glass rounded-2xl p-6 text-center hover:shadow-glow-primary transition-smooth group">
+          <div className="glass rounded-2xl p-6 text-center hover:border-primary/40 hover:scale-105 transition-smooth group">
             <div className="flex justify-center mb-4">
               <div className="p-4 rounded-xl bg-gradient-to-br from-secondary to-primary group-hover:scale-110 transition-spring">
                 <Phone className="h-6 w-6 text-white" />
@@ -35,7 +35,7 @@ const Contact = () => {
             <p className="text-muted-foreground text-sm">+91 XXX XXX XXXX</p>
           </div>
 
-          <div className="glass rounded-2xl p-6 text-center hover:shadow-glow-primary transition-smooth group">
+          <div className="glass rounded-2xl p-6 text-center hover:border-primary/40 hover:scale-105 transition-smooth group">
             <div className="flex justify-center mb-4">
               <div className="p-4 rounded-xl bg-gradient-to-br from-accent to-secondary group-hover:scale-110 transition-spring">
                 <MapPin className="h-6 w-6 text-white" />

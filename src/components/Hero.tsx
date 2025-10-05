@@ -5,6 +5,17 @@ import profileImage from "@/assets/profile.jpg";
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+      {/* Availability Badge */}
+      <div className="absolute top-8 right-8 z-20 blur-fade-in">
+        <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-primary/30">
+          <span className="relative flex h-3 w-3">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+          </span>
+          <span className="text-sm font-medium text-foreground/90">Available for freelance work</span>
+        </div>
+      </div>
+
       {/* Animated Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
@@ -16,14 +27,7 @@ const Hero = () => {
           {/* Text Content */}
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full border border-primary/30 blur-fade-in">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                </span>
-                <span className="text-sm font-medium text-foreground/90">Available for freelance work</span>
-              </div>
-              <h2 className="text-lg md:text-xl text-muted-foreground blur-fade-in-delay-1 font-display">
+              <h2 className="text-lg md:text-xl text-muted-foreground blur-fade-in font-display">
                 Hi, I'm
               </h2>
               <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold blur-fade-in-delay-1">

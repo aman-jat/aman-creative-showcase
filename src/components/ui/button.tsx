@@ -19,7 +19,7 @@ const buttonVariants = cva(
       size: {
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        lg: "h-10 md:h-11 rounded-md px-4 md:px-8",
         icon: "h-10 w-10",
       },
     },
@@ -39,9 +39,50 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+    return (
+      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
+    );
   },
 );
 Button.displayName = "Button";
 
-export { Button, buttonVariants };
+const FilledButton = ({ icon, children, ...props }) => {
+  return (
+    <Button
+      size="lg"
+      className="group bg-gradient-primary hover:shadow-glow-primary  transition-smooth font-display"
+      {...props}
+    >
+      <span className="group-hover:scale-90 transition-all duration-200">{icon}</span>
+      <span className="group-hover:scale-95 transition-all duration-200">{children}</span>
+    </Button>
+  );
+};
+
+const OutlinedButton = ({ children, ...props }) => {
+  return (
+    <Button
+      size="lg"
+      variant="outline"
+      className="glass hover:bg-primary/10  transition-smooth border-primary/30 font-display"
+      {...props}
+    >
+      <span className="transition-all duration-200">{children}</span>
+    </Button>
+  );
+};
+
+const IconButton = ({ children, ...props }) => {
+  return (
+    <a
+      href="https://github.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="p-3 glass rounded-full md:rounded-xl hover:bg-primary/10 transition-smooth "
+    >
+      <span className="transition-all duration-200">{children}</span>
+    </a>
+  );
+};
+
+export { Button, buttonVariants, FilledButton, OutlinedButton, IconButton };

@@ -2,6 +2,24 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
+  const cards = [
+    {
+      icon: Mail,
+      title: "Email",
+      info: "aman.jat@example.com",
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      info: "+91 6260 58 2059",
+    },
+    {
+      icon: MapPin,
+      title: "Location",
+      info: "India",
+    },
+  ];
+
   return (
     <section className="py-20 px-4 relative">
       <div className="max-w-7xl mx-auto">
@@ -15,35 +33,20 @@ const Contact = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          <div className="glass rounded-2xl p-6 text-center hover:border-primary/40 hover:scale-105 transition-smooth group">
-            <div className="flex justify-center mb-4">
-              <div className="p-4 rounded-xl bg-gradient-to-br from-primary to-accent group-hover:scale-110 transition-spring">
-                <Mail className="h-6 w-6 text-white" />
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className="glass rounded-2xl p-6 text-center hover:border-primary/40  transition-smooth group"
+            >
+              <div className="flex justify-center mb-4 transition-smooth hover:scale-105">
+                <div className="transition-smooth p-4 rounded-xl bg-gradient-to-br from-primary to-accent group-hover:scale-110 transition-spring">
+                  <card.icon className="h-6 w-6 text-white" />
+                </div>
               </div>
+              <h3 className="font-semibold mb-2 font-display">{card.title}</h3>
+              <p className="text-muted-foreground text-sm">{card.info}</p>
             </div>
-            <h3 className="font-semibold mb-2 font-display">Email</h3>
-            <p className="text-muted-foreground text-sm">aman.jat@example.com</p>
-          </div>
-
-          <div className="glass rounded-2xl p-6 text-center hover:border-primary/40 hover:scale-105 transition-smooth group">
-            <div className="flex justify-center mb-4">
-              <div className="p-4 rounded-xl bg-gradient-to-br from-secondary to-primary group-hover:scale-110 transition-spring">
-                <Phone className="h-6 w-6 text-white" />
-              </div>
-            </div>
-            <h3 className="font-semibold mb-2 font-display">Phone</h3>
-            <p className="text-muted-foreground text-sm">+91 XXX XXX XXXX</p>
-          </div>
-
-          <div className="glass rounded-2xl p-6 text-center hover:border-primary/40 hover:scale-105 transition-smooth group">
-            <div className="flex justify-center mb-4">
-              <div className="p-4 rounded-xl bg-gradient-to-br from-accent to-secondary group-hover:scale-110 transition-spring">
-                <MapPin className="h-6 w-6 text-white" />
-              </div>
-            </div>
-            <h3 className="font-semibold mb-2 font-display">Location</h3>
-            <p className="text-muted-foreground text-sm">India</p>
-          </div>
+          ))}
         </div>
 
         <div className="text-center">

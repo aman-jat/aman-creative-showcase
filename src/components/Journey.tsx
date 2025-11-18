@@ -57,8 +57,7 @@ const Journey = () => {
             My Journey
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            From IIT aspirant to React specialist—a path of continuous learning
-            and growth
+            From IIT aspirant to React specialist—a path of continuous learning and growth
           </p>
         </div>
 
@@ -80,12 +79,10 @@ const Journey = () => {
                     index % 2 === 0 ? "md:text-right" : "md:text-left"
                   }`}
                 >
-                  <div className="glass rounded-2xl p-6 md:p-8 hover:shadow-glow-primary transition-smooth group">
+                  <div className="glass rounded-2xl p-6 md:p-8 hover:shadow-glow-secondary transition-smooth group">
                     <div
                       className={`flex ${
-                        index % 2 === 0
-                          ? "md:justify-end justify-start"
-                          : "justify-start"
+                        index % 2 === 0 ? "md:justify-end justify-start" : "justify-start"
                       } mb-4`}
                     >
                       <div
@@ -100,9 +97,7 @@ const Journey = () => {
                     <h3 className="text-xl md:text-2xl font-bold mb-3 font-display">
                       {step.title}
                     </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {step.description}
-                    </p>
+                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
                   </div>
                 </div>
 

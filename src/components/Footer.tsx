@@ -9,32 +9,32 @@ const Footer = () => {
         <div className="flex flex-col items-center gap-6">
           <div className="flex gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/aman-jat"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 glass rounded-xl hover:bg-primary/10 transition-smooth hover:shadow-glow-primary"
+              className="p-3 glass rounded-xl hover:bg-primary/10 transition-all ease-in-out "
             >
               <Github className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/amanjat/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 glass rounded-xl hover:bg-primary/10 transition-smooth hover:shadow-glow-primary"
+              className="p-3 glass rounded-xl hover:bg-primary/10 transition-all ease-in-out"
             >
               <Linkedin className="h-5 w-5" />
             </a>
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/@amanjat7"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 glass rounded-xl hover:bg-primary/10 transition-smooth hover:shadow-glow-primary"
+              className="p-3 glass rounded-xl hover:bg-primary/10 transition-all ease-in-out"
             >
               <Youtube className="h-5 w-5" />
             </a>
             <a
-              href="mailto:aman.jat@example.com"
-              className="p-3 glass rounded-xl hover:bg-primary/10 transition-smooth hover:shadow-glow-primary"
+              href="mailto:amanjat261@example.com"
+              className="p-3 glass rounded-xl hover:bg-primary/10 transition-all ease-in-out"
             >
               <Mail className="h-5 w-5" />
             </a>

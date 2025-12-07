@@ -39,59 +39,47 @@ import { Code, Database, Server, Settings } from "lucide-react";
 const Skills = () => {
   const skillCategories = [
     {
-      category: "Frontend Development",
+      category: "Primary Tech Stack (Daily Drivers)",
       gradient: "from-accent to-secondary",
       icon: Code,
       skills: [
-        { name: "Next.js", level: 95, icon: next },
-        { name: "React.js", level: 95, icon: react },
-        { name: "Redux/RTK", level: 88, icon: redux },
-        { name: "Angular", level: 80, icon: angular },
-        { name: "TypeScript/Javascript", level: 95, icon: typescript },
-        { name: "HTML5/CSS3", level: 95, icon: html },
-        { name: "Tailwind CSS", level: 88, icon: tailwind },
-        { name: "Material UI", level: 88, icon: mui },
+        { name: "Next.js", icon: next },
+        { name: "React.js", icon: react },
+        { name: "Redux/RTK", icon: redux },
+        { name: "TypeScript", icon: typescript },
+        { name: "Javascript", icon: typescript },
+        { name: "HTML5/CSS3", icon: html },
+        { name: "Tailwind CSS", icon: tailwind },
+        { name: "Material UI", icon: mui },
+        { name: "Git", icon: git },
+        { name: "GitHub", icon: github },
+        { name: "Jest/Testing", icon: jest },
+        { name: "Vitest", icon: vitest },
+        { name: "React Testing Library", icon: reactTestingLibrary },
+        { name: "Playwright", icon: playwright },
+        { name: "postman", icon: postman },
       ],
     },
     {
-      category: "Backend Development",
+      category: "Experienced & Familiar with",
       gradient: "from-accent to-secondary",
       icon: Server,
       skills: [
-        { name: "Node.js", level: 90, icon: nodejs },
-        { name: "Express.js", level: 88, icon: express },
-        { name: "Python", level: 85, icon: python },
-        { name: "Fast API", level: 92, icon: fastAPI },
-        { name: "PHP", level: 92, icon: php },
-        { name: "Laravel", level: 92, icon: laravel },
-        { name: "GraphQL", level: 80, icon: graphql },
-        { name: "Sequelize", level: 80, icon: sequelize },
-      ],
-    },
-    {
-      category: "Database & Cloud",
-      gradient: "from-accent to-secondary",
-      icon: Database,
-      skills: [
-        { name: "MongoDB", level: 90, icon: mongodb },
-        { name: "MySQL", level: 85, icon: mysql },
-        { name: "PostgreSQL", level: 82, icon: postgreSQL },
-        { name: "Firebase", level: 70, icon: firebase },
-      ],
-    },
-    {
-      category: "Tools & Others",
-      gradient: "from-accent to-secondary",
-      icon: Settings,
-      skills: [
-        { name: "Git", level: 92, icon: git },
-        { name: "GitHub", level: 80, icon: github },
-        { name: "Jest/Testing", level: 85, icon: jest },
-        { name: "Vitest", level: 82, icon: vitest },
-        { name: "React Testing Library", level: 80, icon: reactTestingLibrary },
-        { name: "Playwright", level: 80, icon: playwright },
-        { name: "postman", level: 85, icon: postman },
-        { name: "Android Studio", level: 80, icon: androidStudio },
+        { name: "Angular", icon: angular },
+        { name: "React Native", icon: react },
+        { name: "Node.js", icon: nodejs },
+        { name: "Express.js", icon: express },
+        { name: "Python", icon: python },
+        { name: "Fast API", icon: fastAPI },
+        { name: "PHP", icon: php },
+        { name: "Laravel", icon: laravel },
+        { name: "GraphQL", icon: graphql },
+        { name: "Sequelize", icon: sequelize },
+        { name: "MongoDB", icon: mongodb },
+        { name: "MySQL", icon: mysql },
+        { name: "PostgreSQL", icon: postgreSQL },
+        { name: "Firebase", icon: firebase },
+        { name: "Android Studio", icon: androidStudio },
       ],
     },
   ];
@@ -108,7 +96,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {skillCategories.map((category, catIndex) => (
             <div key={catIndex} className="glass rounded-3xl p-6 md:p-10">
               <h3
@@ -117,34 +105,17 @@ const Skills = () => {
                 {category.category}
               </h3>
 
-              <div className="flex flex-col gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="group">
-                    <div className="flex items-center justify-between mb-1">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 rounded-lg bg-card/50 group-hover:scale-110 transition-spring">
-                          <img
-                            src={skill.icon}
-                            alt="React"
-                            className={`w-6 ${
-                              skillIndex === 0 && catIndex === 0 ? "bg-white" : ""
-                            }`}
-                          />
-                        </div>
-                        <span className="text-sm font-semibold text-foreground font-display">
-                          {skill.name}
-                        </span>
-                      </div>
-                      <span className="text-sm text-muted-foreground font-display">
-                        {skill.level}%
-                      </span>
-                    </div>
-                    <div className="relative h-2 bg-muted rounded-full overflow-hidden">
-                      <div
-                        className={`absolute inset-y-0 left-0 bg-gradient-to-r ${category.gradient} rounded-full transition-all duration-1000 ease-out`}
-                        style={{ width: `${skill.level}%` }}
-                      />
-                    </div>
+                  <div className="flex flex-col items-center">
+                    <img
+                      src={skill.icon}
+                      alt="React"
+                      className={`h-12  ${skillIndex === 0 && catIndex === 0 ? "bg-white" : ""}`}
+                    />
+                    <span className="text-sm font-semibold text-foreground font-display">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>

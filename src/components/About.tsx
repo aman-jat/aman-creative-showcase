@@ -65,7 +65,7 @@ const About = () => {
 
         <div className="glass rounded-3xl p-8 md:p-12 space-y-6">
           <h3 className="text-2xl md:text-3xl font-bold gradient-text font-display">
-            Tech Enthusiast & React Specialist
+            Engineering Digital Products with Quality & Ownership
           </h3>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p className="text-base md:text-lg">

@@ -1,9 +1,13 @@
 import { Button, FilledButton, IconButton, OutlinedButton } from "@/components/ui/button";
-import { Download, Github, Linkedin, Youtube } from "lucide-react";
+import { Switch } from "@/components/ui/switch";
+
+import { Download, Github, Linkedin, Youtube, Sun, Moon } from "lucide-react";
+import { useTheme } from "next-themes";
 import profileImage from "@/assets/profile.jpg";
 import resume from "@/assets/resume/resume.pdf";
 
 const Hero = () => {
+  const { theme, setTheme } = useTheme();
 
   const downloadAndViewResume = () => {
     window.open(resume, "_blank");
@@ -36,6 +40,17 @@ const Hero = () => {
         <div
           className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
+        />
+      </div>
+
+      <div className="absolute top-4 right-4 z-50 flex items-center gap-2">
+        <div className="relative w-[1.2rem] h-[1.2rem]">
+          <Sun className="absolute inset-0 h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <Moon className="absolute inset-0 h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+        </div>
+        <Switch
+          checked={theme === "dark"}
+          onCheckedChange={(checked) => setTheme(checked ? "dark" : "light")}
         />
       </div>
 
@@ -85,7 +100,10 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 blur-fade-in-delay-3">
-              <FilledButton onClick={downloadAndViewResume} icon={<Download className="mr-2 h-5 w-5 " />}>
+              <FilledButton
+                onClick={downloadAndViewResume}
+                icon={<Download className="mr-2 h-5 w-5 " />}
+              >
                 Download Resume
               </FilledButton>
               <OutlinedButton>View Projects</OutlinedButton>

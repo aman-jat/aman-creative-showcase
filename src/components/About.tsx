@@ -69,20 +69,21 @@ const About = () => {
           </h3>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p className="text-base md:text-lg">
-              I'm not just a developer—I'm a problem solver at heart. With a deep passion for React
-              and JavaScript, I thrive on turning complex challenges into elegant, user-friendly
-              solutions that make a real impact.
+              I help businesses turn their ideas into reliable, high-quality digital products. With
+              experience delivering 20+ real-world projects across multiple industries, I focus on
+              building applications that are fast, stable, and easy for users to love.
             </p>
+
             <p className="text-base md:text-lg">
-              Throughout my career, I've had the privilege of working across 3 different
-              organizations, contributing to over 20 real-world projects. Each project has taught me
-              something new, helping me refine my skills and approach to building scalable,
-              maintainable applications.
+              My work is centered around clear communication, strong ownership, and on-time
+              delivery. Whether it’s a startup MVP, an internal business tool, or a large-scale
+              platform, I make sure the final product is polished, scalable, and ready for real
+              users.
             </p>
+
             <p className="text-base md:text-lg">
-              What drives me? The satisfaction of solving problems that others find impossible.
-              Whether it's optimizing performance, architecting complex systems, or mentoring
-              others, I'm always looking for the next challenge to tackle.
+              Clients and teams trust me because I don’t just write code — I take responsibility for
+              the outcome, quality, and long-term success of the product.
             </p>
           </div>
         </div>

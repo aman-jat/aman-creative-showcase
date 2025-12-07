@@ -72,10 +72,10 @@ const OutlinedButton = ({ children, ...props }) => {
   );
 };
 
-const IconButton = ({ children, ...props }) => {
+const IconButton = ({ children, href }) => {
   return (
     <a
-      href="https://github.com"
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       className="p-3 glass rounded-full md:rounded-xl hover:bg-primary/10 transition-smooth "

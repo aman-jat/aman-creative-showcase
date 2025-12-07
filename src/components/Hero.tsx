@@ -1,8 +1,14 @@
 import { Button, FilledButton, IconButton, OutlinedButton } from "@/components/ui/button";
 import { Download, Github, Linkedin, Youtube } from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
+import resume from "@/assets/resume/resume.pdf";
 
 const Hero = () => {
+
+  const downloadAndViewResume = () => {
+    window.open(resume, "_blank");
+  };
+
   const Image = ({ size = "" }) => {
     let className = "w-64 h-64";
 
@@ -44,8 +50,8 @@ const Hero = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold blur-fade-in-delay-1">
                 <span className="gradient-text font-display">Aman Jat</span>
               </h1>
-              <p className="text-xl md:text-3xl lg:text-4xl text-foreground/90 blur-fade-in-delay-2 font-display">
-                React Developer &{" "}
+              <p className="text-xl md:text-3xl lg:text-3xl text-foreground/90 blur-fade-in-delay-2 font-display">
+                Software Developer &{" "}
                 <span className="gradient-secondary-text font-bold">Problem Solver</span>
               </p>
             </div>
@@ -59,12 +65,11 @@ const Hero = () => {
               A passionate tech enthusiast with{" "}
               <span className="text-blue-400 font-semibold">5+ years</span> of hands-on experience
               crafting exceptional digital experiences. Specialized in{" "}
-              <span className="text-purple-400 font-semibold">React</span> and{" "}
-              <span className="text-purple-400 font-semibold">JavaScript</span>, I've delivered{" "}
-              <span className="text-blue-400 font-semibold">20+ real-world projects</span> across{" "}
-              <span className="text-blue-400 font-semibold">3 organizations</span>.<br></br>
-              I'm a tech enthusiast who loves turning complex problems into elegant, scalable
-              solutions.
+              <span className="text-purple-400 font-semibold">modern web technologies</span> , I've
+              delivered <span className="text-blue-400 font-semibold">20+ real-world projects</span>{" "}
+              across <span className="text-blue-400 font-semibold">3 organizations</span>.<br></br>
+              From understanding client goals to writing clean modern code, I love building
+              solutions that are optimized, user-centered, and ready to scale.
             </p>
 
             <div className="hidden md:flex blur-fade-in-delay-3">
@@ -80,20 +85,20 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 blur-fade-in-delay-3">
-              <FilledButton icon={<Download className="mr-2 h-5 w-5 " />}>
+              <FilledButton onClick={downloadAndViewResume} icon={<Download className="mr-2 h-5 w-5 " />}>
                 Download Resume
               </FilledButton>
               <OutlinedButton>View Projects</OutlinedButton>
             </div>
 
             <div className="flex gap-4 blur-fade-in-delay-3">
-              <IconButton>
+              <IconButton href="https://github.com/aman-jat">
                 <Github className="h-6 w-6" />
               </IconButton>
-              <IconButton>
+              <IconButton href="https://www.linkedin.com/in/aman-jat/">
                 <Linkedin className="h-6 w-6" />
               </IconButton>
-              <IconButton>
+              <IconButton href="https://www.youtube.com/@amanjat7">
                 <Youtube className="h-6 w-6" />
               </IconButton>
             </div>

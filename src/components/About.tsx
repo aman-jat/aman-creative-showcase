@@ -11,7 +11,7 @@ const About = () => {
     {
       icon: Briefcase,
       value: "20+",
-      label: "Real Projects",
+      label: "Projects",
       gradient: "from-secondary to-primary",
     },
     {
@@ -36,8 +36,7 @@ const About = () => {
             About Me
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A passionate developer who loves to craft exceptional digital
-            experiences
+            A passionate developer who loves to craft exceptional digital experiences
           </p>
         </div>
 
@@ -54,7 +53,9 @@ const About = () => {
                   <stat.icon className="h-8 w-8 text-white" />
                 </div>
               </div>
-              <div className={`text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent font-display`}>
+              <div
+                className={`text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-br ${stat.gradient} bg-clip-text text-transparent font-display`}
+              >
                 {stat.value}
               </div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>
@@ -68,23 +69,20 @@ const About = () => {
           </h3>
           <div className="space-y-4 text-muted-foreground leading-relaxed">
             <p className="text-base md:text-lg">
-              I'm not just a developer—I'm a problem solver at heart. With a
-              deep passion for React and JavaScript, I thrive on turning complex
-              challenges into elegant, user-friendly solutions that make a real
-              impact.
+              I'm not just a developer—I'm a problem solver at heart. With a deep passion for React
+              and JavaScript, I thrive on turning complex challenges into elegant, user-friendly
+              solutions that make a real impact.
             </p>
             <p className="text-base md:text-lg">
-              Throughout my career, I've had the privilege of working across 3
-              different organizations, contributing to over 20 real-world
-              projects. Each project has taught me something new, helping me
-              refine my skills and approach to building scalable, maintainable
-              applications.
+              Throughout my career, I've had the privilege of working across 3 different
+              organizations, contributing to over 20 real-world projects. Each project has taught me
+              something new, helping me refine my skills and approach to building scalable,
+              maintainable applications.
             </p>
             <p className="text-base md:text-lg">
-              What drives me? The satisfaction of solving problems that others
-              find impossible. Whether it's optimizing performance, architecting
-              complex systems, or mentoring others, I'm always looking for the
-              next challenge to tackle.
+              What drives me? The satisfaction of solving problems that others find impossible.
+              Whether it's optimizing performance, architecting complex systems, or mentoring
+              others, I'm always looking for the next challenge to tackle.
             </p>
           </div>
         </div>

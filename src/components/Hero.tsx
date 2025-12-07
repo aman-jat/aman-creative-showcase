@@ -34,14 +34,7 @@ const Hero = () => {
   };
   return (
     <section className="min-h-screen flex items-center justify-center  px-4 py-8 md:py-20 relative overflow-hidden">
-      {/* Animated Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-card to-background">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/20 rounded-full blur-3xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        />
-      </div>
+      {/* Background removed, moved to Index.tsx */}
 
       <div className="absolute top-4 right-4 z-50 flex items-center gap-2">
         <div className="relative w-[1.2rem] h-[1.2rem]">

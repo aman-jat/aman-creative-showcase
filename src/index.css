@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Premium Light Theme Colors */
-    --background: 0 0% 100%;
+    --background: 0 0% 70%;
     --foreground: 222 47% 5%;
 
     --card: 0 0% 100%;

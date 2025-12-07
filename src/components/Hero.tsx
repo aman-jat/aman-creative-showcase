@@ -53,6 +53,7 @@ const Hero = () => {
             <span className="flex lg:hidden">
               <Image size="small" />
             </span>
+            {/*  */}
 
             <p className="text-sm md:text-lg text-muted-foreground max-w-xl leading-relaxed blur-fade-in-delay-3">
               A passionate tech enthusiast with{" "}

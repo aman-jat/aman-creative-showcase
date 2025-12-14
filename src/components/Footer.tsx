@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="text-center text-muted-foreground">
             <p className="flex items-center gap-2 text-sm font-display">
               © {currentYear} Aman Jat. Built with{" "}
-              <Heart className="h-4 w-4 text-red-500 fill-red-500" /> and React
+              <Heart className="h-4 w-4 text-red-500 fill-red-500" />
             </p>
           </div>
         </div>

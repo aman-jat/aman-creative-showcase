@@ -36,10 +36,10 @@ const Contact = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="glass rounded-2xl p-6 text-center hover:border-primary/40  transition-smooth group"
+              className="glass rounded-2xl p-6 text-center hover:border-primary/40 hover:shadow-xl hover:bg-white/5 transition-smooth group"
             >
-              <div className="flex justify-center mb-4 transition-smooth hover:scale-105">
-                <div className="transition-smooth p-4 rounded-xl bg-gradient-to-br from-primary to-accent group-hover:scale-110 transition-spring">
+              <div className="flex justify-center mb-4 transition-smooth">
+                <div className="transition-smooth p-4 rounded-xl bg-gradient-to-br from-primary to-accent transition-spring">
                   <card.icon className="h-6 w-6 text-white" />
                 </div>
               </div>
